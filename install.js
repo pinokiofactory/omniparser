@@ -5,7 +5,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/cocktailpeanut/OmniParser app",
+          "git clone https://github.com/microsoft/OmniParser app",
         ]
       }
     },
@@ -49,7 +49,7 @@ module.exports = {
       method: "shell.run",
       params: {
         path: "app",
-        message: "huggingface-cli download microsoft/OmniParser --local-dir weights/omniparser"
+        message: "huggingface-cli download microsoft/OmniParser --local-dir weights"
       }
     }
   ]

@@ -5,7 +5,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/microsoft/OmniParser app",
+          "git clone https://github.com/cocktailpeanut/OmniParser app",
         ]
       }
     },
@@ -29,7 +29,7 @@ module.exports = {
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
           "pip install gradio devicetorch",
-          "pip install -r requirements.txt"
+          "pip install -r requirement.txt"
         ]
       }
     },
@@ -37,6 +37,19 @@ module.exports = {
       method: "fs.link",
       params: {
         venv: "app/env"
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
+        message: "conda install -y -c conda-forge huggingface_hub"
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
+        path: "app",
+        message: "huggingface-cli download microsoft/OmniParser --local-dir weights/omniparser"
       }
     }
   ]
